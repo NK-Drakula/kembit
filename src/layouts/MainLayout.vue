@@ -1,6 +1,6 @@
 <script setup>
-import LogoHead from '@/components/header/LogoHead.vue'
-import NavBar from '@/components/header/NavBar.vue'
+import LogoHead from '@/components/header/LogoHead.vue';
+import NavBar from '@/components/header/NavBar.vue';
 
 </script>
 <template>

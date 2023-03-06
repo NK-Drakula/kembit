@@ -24,7 +24,7 @@ const goBack = () => {
           Back
         </button>
       </div>
-      <div class="py-9 dark:bg-neutral-800 rounded-lg my-5 px-5 text-gray-200">
+      <div class="py-9 dark:bg-neutral-800 bg-gray-500 rounded-lg my-5 px-5 text-gray-200">
         <h1 class="text-4xl font-semibold">
           {{ item.title ?? '' }}
         </h1>
