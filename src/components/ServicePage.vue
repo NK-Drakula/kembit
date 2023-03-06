@@ -15,20 +15,20 @@
     </div>
     <div class="flex flex-wrap py-5 p-1 sm:p-3 lg:p-10 md:p-5 justify-center">
       <!-- Card -->
-      <div class="w-full md:w-6/12 lg:w-4/12" v-for="item in services.services" :key="item.id"  data-aos="fade-right" data-aos-duration="3000">
-        <div class="shadow-2xl h-[230px]  md:h-[240px] lg:h-[220px] relative my-3 rounded-lg p-5 m-2 flex flex-col dark:bg-gradient-to-tr from-neutral-900/60 to-neutral-900/90 via-slate-900/60 dark:shadow-zinc-900 hvr-glow">
+      <div class="w-full md:w-6/12 lg:w-4/12" v-for="item in services.services" :key="item.id" data-aos="fade-right"
+        data-aos-duration="3000">
+        <div
+          class="shadow-2xl h-[230px]  md:h-[240px] lg:h-[220px] relative my-3 rounded-lg p-5 m-2 flex flex-col dark:bg-gradient-to-tr from-neutral-900/60 to-slate-900/90 via-slate-900/60 dark:shadow-zinc-900 hvr-glow">
           <h1 class="font-medium text-lg dark:text-white">{{ item.title }}</h1>
           <div class="text-gray-500" v-html="item.desc.substring(0, 150)"></div>
-          <RouterLink
-            :to="'/view/' + item.id + '/' + item.slug.toLowerCase()"
-            class="bg-primary w-fit absolute bottom-3 right-2 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-indigo-700"
-            >Read More</RouterLink
-          >
+          <RouterLink :to="'/view/' + item.id + '/' + item.slug.toLowerCase()"
+            class="bg-primary w-fit absolute bottom-3 right-2 text-white px-3 py-2 rounded-lg font-semibold text-sm hover:bg-indigo-700">
+            Read More</RouterLink>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script setup>
- import services from '@/stores/services.json'
+import services from '@/stores/services.json'
 </script>

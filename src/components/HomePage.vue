@@ -21,7 +21,7 @@ const typed = ['Frontend Developer', 'Backend Developer', 'Mobile Developer', 'I
                                 <AutoType :text="typed" />
                             </span>
                         </div>
-                        <div class="my-4 dark:text-gray-200 text-sm md:text-md max-w-md">
+                        <div class="my-4 dark:text-gray-200 text-md md:text-lg max-w-md">
                             <span class="text-primary font-semibold">iDesign</span>, <span
                                 class="text-primary font-semibold">iBuild</span>, <span
                                 class="text-primary font-semibold">iDevelop</span>, <span
@@ -64,22 +64,30 @@ const typed = ['Frontend Developer', 'Backend Developer', 'Mobile Developer', 'I
                             </div>
                         </a>
                     </div>
-                    <div class="my-7" >
+                    <div class="my-7 flex gap-5 items-center justify-center md:block">
+
+
+                        <a href="../assets/EmmaNkemCV.pdf"
+                            class="px-4 py-2 font-sans font-semibold w-fit bg-primary rounded-xl text-white h-fit gap-1 flex items-center shadow hover:shadow-inner shadow-primary animate__animated animate__pulse animate__slower animate__infinite animate__delay-5s hvr-icon-hang">
+                            Download CV
+                            <i class='bx bxs-cloud-download text-3xl hvr-icon'></i>
+                        </a>
 
 
                         <a href="tel:+2348076497448"
-                            class="px-4 py-2 font-sans font-semibold w-fit bg-primary rounded-xl text-white h-fit gap-1 flex items-center shadow hover:shadow-inner shadow-primary animate__animated animate__pulse animate__slower animate__infinite animate__delay-5s hvr-icon-hang">
-                                Download CV
-                                <i class='bx bxs-cloud-download text-3xl hvr-icon'></i>
+                            class="px-4 py-2 font-sans font-semibold w-fit bg-primary rounded-xl text-white h-fit gap-1 flex items-center shadow hover:shadow-inner shadow-primary animate__animated animate__pulse animate__slower animate__infinite animate__delay-5s hvr-icon-buzz-out md:hidden">
+                            Call Us
+                            <i class='bx bx-phone text-3xl hvr-icon '></i>
                         </a>
                     </div>
                 </div>
                 <!-- Second Col flex -->
                 <div class="px-10 md:px-0">
                     <!-- animated Image  -->
-                <img src="@/assets/home_image.png" alt=""
-                    class="rounded w-full  md:h-80 md:w-80 lg:h-96 lg:w-96 animate__animated animate__pulse animate__slower animate__infinite animate__delay-1s">
+                    <img src="@/assets/home_image.png" alt=""
+                        class="rounded w-full  md:h-80 md:w-80 lg:h-96 lg:w-96 animate__animated animate__pulse animate__slower animate__infinite animate__delay-1s">
+                </div>
             </div>
         </div>
     </div>
-</div></template>
+</template>

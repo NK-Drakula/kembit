@@ -66,15 +66,6 @@
           class="dark:peer-hover:border-b-2 dark:peer-hover:border-primary  dark:peer-hover:transition dark:peer-hover:duration-700 dark:peer-hover:delay-100 dark:peer-hover:translate-y-3 peer-hover:border-b-2 peer-hover:border-white  peer-hover:transition peer-hover:duration-700 peer-hover:delay-100 peer-hover:translate-y-3">
         </div>
       </li>
-
-      <li class="block mb-6 md:hidden float-right">
-
-        <a href="tel:+2348076497448"
-          class="px-4 py-2 font-sans font-semibold w-fit dark:bg-primary rounded-lg text-white h-fit gap-1 hvr-icon-buzz-out flex items-center border-2 border-white dark:border-none">
-          Call Us
-          <PhoneIcon class="hvr-icon w-4 h-4" />
-        </a>
-      </li>
     </ul>
   </div>
 </template>
