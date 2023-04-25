@@ -19,7 +19,7 @@
       <Bars4Icon class="w-7 h-7" v-else />
     </button>
     <a href="tel:+2348076497448"
-      class=" hidden px-4 py-2 font-sans font-semibold w-fit bg-primary rounded-lg text-white h-fit gap-1 hvr-icon-buzz-out md:flex items-center  border-2 border-white dark:border-none">
+      class=" hidden px-4 py-2 font-sans font-semibold w-fit bg-primary rounded-lg text-white h-fit gap-1 hvr-icon-buzz-out md:flex items-center  border-2 border-white dark:border-none mr-6">
       Call Us
       <PhoneIcon class="hvr-icon w-4 h-4" />
     </a>

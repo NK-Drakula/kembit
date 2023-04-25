@@ -6,6 +6,7 @@ import router from '@/router'
 import TransitionRoot from '@/components/TransitionRoot.vue'
 import MainLayout from '@/layouts/MainLayout.vue'
 
+import { inject } from '@vercel/analytics';
 
 import 'animate.css'
 import 'hover.css'
@@ -23,5 +24,8 @@ app.component('TransitionRoot', TransitionRoot)
 app.component('MainLayout', MainLayout)
 
 app.mount('#app')
+
+inject();
+
 
 AOS.init()
