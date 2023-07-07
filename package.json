@@ -1,39 +1,23 @@
 {
-  "name": "nkodes",
-  "version": "0.0.0",
+  "name": "nuxt-app",
   "private": true,
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
-    "format": "prettier --write src/"
-  },
-  "dependencies": {
-    "@headlessui/vue": "^1.7.12",
-    "@heroicons/vue": "^2.0.16",
-    "@vercel/analytics": "^1.0.0",
-    "@vueuse/core": "^9.13.0",
-    "animate.css": "^4.1.1",
-    "aos": "^2.3.4",
-    "boxicons": "^2.1.4",
-    "flowbite": "^1.6.3",
-    "hover.css": "^2.3.2",
-    "pinia": "^2.0.32",
-    "vue": "^3.2.47",
-    "vue-router": "^4.1.6",
-    "vue-typed-js": "^0.1.2"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@rushstack/eslint-patch": "^1.2.0",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vue/eslint-config-prettier": "^7.1.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.34.0",
-    "eslint-plugin-vue": "^9.9.0",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.4",
-    "tailwindcss": "^3.2.7",
-    "vite": "^4.1.4"
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.8.0",
+    "@types/node": "^18",
+    "aos": "^2.3.4",
+    "nuxt": "^3.6.1"
+  },
+  "dependencies": {
+    "@heroicons/vue": "^2.0.18",
+    "@vueuse/core": "^10.2.1",
+    "flowbite": "^1.6.6"
   }
 }
