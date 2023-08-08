@@ -1,12 +1,15 @@
 <script setup>
-const baseUrl = useRuntimeConfig().public.baseURL;
-const { data: projects, pending, error } = useLazyFetch('/projects', { baseURL: baseUrl });
+const { $projectStore } = useNuxtApp()
+
+onMounted(async () => {
+    await $projectStore.getProjects()
+})
 </script>
 
 <template>
     <div class="min-h-screen py-16 md:py-20 bg-gray-200 dark:bg-zinc-900 px-5 md:px-0">
         <div
-            v-if="pending"
+            v-if="$projectStore.isEmpty"
             class="flex justify-center items-center min-h-screen"
         >
             <Loader />
@@ -24,7 +27,7 @@ const { data: projects, pending, error } = useLazyFetch('/projects', { baseURL: 
                 <div
                     class="grid grid-cols-12 gap-6 md:gap-16 items-center justify-center"
                 >
-                    <div v-for="project in projects.data" class="col-span-12 md:col-span-6">
+                    <div v-for="project in $projectStore.projects" class="col-span-12 md:col-span-6">
                         <WorkCard :project="project" />
                     </div>
                 </div>

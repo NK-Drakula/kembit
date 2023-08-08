@@ -1,11 +1,14 @@
 <script setup>
-const baseUrl = useRuntimeConfig().public.baseURL;
-const { data: services, pending, error } = useLazyFetch('/services', { baseURL: baseUrl });
+const { $serviceStore } = useNuxtApp();
+
+onMounted(async () => {
+    await $serviceStore.getServices();
+});
 </script>
 
 <template>
     <div class="py-16 md:py-20 bg-gray-200 dark:bg-zinc-900 md:-mt-20 px-5 md:px-0" id="services">
-        <div v-if="pending" class="">
+        <div v-if="$serviceStore.isEmpty" class="">
             <!-- <Loader /> -->
         </div>
         <div v-else class="max-w-screen-lg mx-auto">
@@ -19,7 +22,7 @@ const { data: services, pending, error } = useLazyFetch('/services', { baseURL: 
                 <div class="">
                     <div class="grid grid-cols-12 justify-center items-center gap-6">
                         <div
-                            v-for="service in services.data"
+                            v-for="service in $serviceStore.$state.services"
                             class="col-span-12 md:col-span-6 lg:col-span-4"
                             data-aos="zoom-in-left"
                             :data-aos-duration="3000"

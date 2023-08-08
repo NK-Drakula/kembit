@@ -11,13 +11,20 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/tailwindcss": "^6.8.0",
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@types/node": "^18",
     "aos": "^2.3.4",
     "nuxt": "^3.6.1"
   },
   "dependencies": {
     "@heroicons/vue": "^2.0.18",
+    "@pinia/nuxt": "^0.4.11",
     "@vueuse/core": "^10.2.1",
-    "flowbite": "^1.6.6"
+    "axios": "^1.4.0",
+    "flowbite": "^1.6.6",
+    "pinia": "^2.1.6"
+  },
+  "overrides": {
+    "vue": "latest"
   }
 }

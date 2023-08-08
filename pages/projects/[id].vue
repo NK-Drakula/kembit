@@ -1,22 +1,20 @@
 <script setup>
 const route = useRoute();
-const id = route.params.id;
+const id = ref(route.params.id);
 
-const baseUrl = useRuntimeConfig().public.baseURL;
+const { $projectStore } = useNuxtApp();
 
-const {
-    data: project,
-    pending,
-    error,
-    refresh
-} = useLazyFetch('/project/' + id, {
-    baseURL: baseUrl
+onMounted(async () => {
+    await $projectStore.getProject(id.value);
 });
 </script>
 
 <template>
     <div class="min-h-screen mt-10 mb-25">
-        <div v-if="pending" class="text-3xl h-[80vh] flex items-center justify-center">
+        <div
+            v-if="!$projectStore.project.id  || $projectStore.project.id != id"
+            class="text-3xl h-[80vh] flex items-center justify-center"
+        >
             <Loader />
         </div>
         <div v-else class="md:py-20 md:-mt-20 px-5">
@@ -25,20 +23,20 @@ const {
                     class="lg:mx-20 bg-white/60 dark:bg-white/10 p-5 md:p-10 rounded-xl dark:text-white"
                 >
                     <img
-                        :src="project.data.cover_image"
-                        :alt="project.data.title"
+                        :src="$projectStore.project.cover_image"
+                        :alt="$projectStore.project.title"
                         class="rounded"
                     />
                     <div class="max-w-3xl mx-auto space-y-8">
                         <h1 class="py-5 md:py-10 font-bold text-2xl lg:text-4xl text-center">
-                            {{ project.data.title }}
+                            {{ $projectStore.project.title }}
                         </h1>
                         <div class="space-y-2">
                             <strong>Stacks Use:</strong><br />
 
                             <div class="flex items-center -space-x-2">
                                 <img
-                                    v-for="stack in project.data.stacks"
+                                    v-for="stack in $projectStore.project.stacks"
                                     :key="stack"
                                     :src="stack.image"
                                     :alt="stack.title"
@@ -50,7 +48,7 @@ const {
                         <div class="space-y-2">
                             <strong>Project Description:</strong><br />
                             <div
-                                v-html="project.data.description"
+                                v-html="$projectStore.project.description"
                                 class="text-justify space-y-3"
                             ></div>
                         </div>
@@ -58,10 +56,14 @@ const {
                             <div class="flex justify-between">
                                 <div class="">
                                     <strong>Role:</strong><br />
-                                    <div v-html="project.data.role" class=""></div>
+                                    <div v-html="$projectStore.project.role" class=""></div>
                                 </div>
                                 <div class="">
-                                    <NuxtLink :to="project.data.project_link" target="_blank" class="relative flex items-center overflow-hidden border-none rounded-xl cssbuttons-io-button bg-primary shadow-primary/75 text-white font-bold">
+                                    <NuxtLink
+                                        :to="$projectStore.project.project_link"
+                                        target="_blank"
+                                        class="relative flex items-center overflow-hidden border-none rounded-xl cssbuttons-io-button bg-primary shadow-primary/75 text-white font-bold"
+                                    >
                                         Project Link
                                         <div class="icon">
                                             <svg

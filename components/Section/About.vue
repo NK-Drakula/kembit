@@ -1,17 +1,16 @@
 <script setup>
-const baseUrl = useRuntimeConfig().public.baseURL;
-const {
-    data: about,
-    pending: aboutPending,
-    error: aboutError
-} = useLazyFetch('/about', { baseURL: baseUrl });
+const { $aboutStore } = useNuxtApp();
+
+onMounted(async () => {
+    await $aboutStore.getAbout();
+});
 </script>
 <template>
     <div
         class="md:py-20 bg-gradient-to-t to-transparent dark:via-zinc-900 from-gray-200 dark:from-[#19191C] dark:to-transparent md:-mt-20 px-5"
         id="about"
     >
-        <div v-if="aboutPending" class="flex justify-center items-center" >
+        <div v-if="$aboutStore.$state.isEmpty" class="flex justify-center items-center">
             <Loader />
         </div>
         <div v-else class="max-w-screen-md mx-auto">
@@ -43,7 +42,7 @@ const {
                                 Better Experience
                             </h1>
                             <div
-                                v-html="about.data.description"
+                                v-html="$aboutStore.$state.description"
                                 class="text-gray-700 dark:text-gray-300 md:text-lg"
                                 data-aos="fade-left"
                                 data-aos-duration="2500"
