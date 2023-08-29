@@ -7,10 +7,10 @@ onMounted(async () => {
 </script>
 
 <template>
-    <div class="py-16 md:py-20 bg-gray-200 dark:bg-zinc-900 md:-mt-20 px-5 md:px-0">
+    <div class="py-16 md:py-20 bg-gray-200 dark:bg-zinc-900 md:-mt-20 px-5 md:px-0 overflow-hidden">
         <div v-if="$projectStore.isEmpty" class=""></div>
         <div v-else>
-            <div class="max-w-screen-lg mx-auto">
+            <div class="w-full lg:max-w-screen-md mx-auto">
                 <h1
                     class="text-2xl mb-12 md:text-3xl font-bold text-center text-primary uppercase py-4"
                 >

@@ -7,13 +7,13 @@ onMounted(async () => {
 </script>
 <template>
     <div
-        class="md:py-20 bg-gradient-to-t to-transparent dark:via-zinc-900 from-gray-200 dark:from-[#19191C] dark:to-transparent md:-mt-20 px-5"
+        class="md:py-20 bg-gradient-to-t to-transparent dark:via-zinc-900 from-gray-200 dark:from-[#19191C] dark:to-transparent md:-mt-20 px-5 overflow-hidden"
         id="about"
     >
         <div v-if="$aboutStore.$state.isEmpty" class="flex justify-center items-center">
             <Loader />
         </div>
-        <div v-else class="max-w-screen-md mx-auto">
+        <div v-else class="w-full lg:max-w-screen-md mx-auto">
             <div>
                 <div class="">
                     <div

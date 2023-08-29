@@ -9,8 +9,8 @@ const link = '/services/' + props.service.id;
 
 <template>
     <div
-        class="bg-gray-300/50 dark:bg-zinc-800 text-gray-500 dark:text-gray-300 flex items-center justify-center card rounded-2xl text-2xl text-center cursor-pointer p-4 hover:shadow-lg shadow-inner max-w-md mx-auto"
-        data-aos="zoom-in-left"
+        class="bg-gray-300/50 dark:bg-zinc-800 text-gray-500 dark:text-gray-300 flex items-center justify-center card rounded-2xl text-2xl text-center cursor-pointer p-4 hover:shadow-lg shadow-inner md:max-w-md mx-auto"
+        data-aos="fade-right"
         data-aos-duration="3000"
     >
         <div class="h-fit">

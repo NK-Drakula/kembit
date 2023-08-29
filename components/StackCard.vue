@@ -8,12 +8,12 @@ const stack = props.stack;
 
 <template>
     <div
-        class="col-span-4 md:col-span-3 lg:col-span-2 rounded-lg flex flex-col justify-center items-center my-3 px-2 sm:px-3 md:px-4 lg:px-5"
+        class="col-span-6 md:col-span-4 lg:col-span-3 rounded-lg flex flex-col justify-center items-center"
         data-aos="fade-left"
         :data-aos-duration="3000"
     >
         <div
-            class="bg-gray-300/50 dark:bg-zinc-800 p-4 lg:mx-45 rounded-lg flex items-center justify-center hvr-glow shadow-md"
+            class="bg-gray-300/50 dark:bg-zinc-800 rounded-lg flex items-center justify-center hvr-glow shadow-md w-full h-[200px] space-y-5"
         >
             <div class="text-center">
                 <img
