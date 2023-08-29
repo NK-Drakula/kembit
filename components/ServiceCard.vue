@@ -3,13 +3,13 @@ const props = defineProps({
     service: Object
 });
 
-const desc = props.service.description.substring(0, 150) + '...';
+const desc = props.service.description.substring(0, 135) + '...';
 const link = '/services/' + props.service.id;
 </script>
 
 <template>
     <div
-        class="bg-gray-300/50 dark:bg-zinc-800 text-gray-500 dark:text-gray-300 flex items-center justify-center card rounded-2xl text-2xl text-center cursor-pointer p-4 hover:shadow-lg shadow-inner"
+        class="bg-gray-300/50 dark:bg-zinc-800 text-gray-500 dark:text-gray-300 flex items-center justify-center card rounded-2xl text-2xl text-center cursor-pointer p-4 hover:shadow-lg shadow-inner max-w-md mx-auto"
         data-aos="zoom-in-left"
         data-aos-duration="3000"
     >

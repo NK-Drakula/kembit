@@ -12,7 +12,7 @@ const link = '/projects/' + project.id;
 <template>
     <NuxtLink
         :to="link"
-        class="card md:w-[510px] md:h-[260px] bg-gray-300 dark:bg-zinc-800 relative rounded-xl flex items-center justify-center overflow-hidden"
+        class="card md:w-[510px] md:h-[260px] bg-gray-300 dark:bg-zinc-800 relative rounded-xl flex items-center justify-center overflow-hidden mx-auto"
         data-aos="fade-left"
         data-aos-duration="3000"
     >

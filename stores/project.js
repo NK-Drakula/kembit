@@ -21,5 +21,6 @@ export const useProjectStore = defineStore('project', {
             let res = await $axios.get('project/' + id);
             this.$state.project = res.data.data;
         }
-    }
+    },
+    persist: true
 });

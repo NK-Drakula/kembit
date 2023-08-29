@@ -4,26 +4,39 @@ const typed = [
     'Frontend Developer',
     'Backend Developer',
     'Mobile Developer',
-    'IT Consultant',
     'Freelancer',
     'Content Creator'
 ];
+
+var date = ref(NaN);
+var greetings = ref('');
+
+onMounted(() => {
+    date.value = new Date().getHours();
+    if (date.value >= 0 || date.value < 12) {
+        greetings.value = 'Good Morning';
+    } else if (date.value >= 12 || date.value < 17) {
+        greetings.value = 'Good Afternoon';
+    } else {
+        greetings.value = 'Good Evening';
+    }
+});
 </script>
 <template>
     <div class="min-h-screen">
-        <div class="">
+        <div class="mt-24 md:mt-10 lg:mt-0">
             <div
-                class="flex flex-col md:flex-row items-center justify-center md:space-x-11 h-[80vh] md:h-screen px-5 gap-10"
+                class="flex flex-col lg:flex-row items-center justify-center lg:space-x-11 min-h-[80vh] lg:h-screen px-5 gap-10"
             >
                 <!-- first col flex -->
-                <div class="grid space-y-6 md:space-y-6">
+                <div class="grid space-y-6 lg:space-y-6">
                     <div
-                        class="grid space-y-8 md:space-y-4 animate__animated animate__slideInLeft animate__slow"
+                        class="grid space-y-8 lg:space-y-4 animate__animated animate__slideInLeft animate__slow"
                         data-aos="fade-left"
                         data-aos-duration="3000"
                     >
                         <div class="dark:text-white text-xl md:text-2xl lg:text-3xl font-semibold">
-                            Hello, It's Me
+                            Hi {{ greetings }}, It's Me
                         </div>
                         <div class="md:uppercase text-5xl lg:text-6xl font-bold dark:text-white">
                             Emmanuel Nkem
@@ -53,35 +66,41 @@ const typed = [
                         data-aos="fade-right"
                         data-aos-duration="2000"
                     >
-                        <a href="http://m.facebook.com/profile.php?id=100013693423003">
+                        <a
+                            href="http://m.facebook.com/profile.php?id=100013693423003"
+                            target="_blank"
+                        >
                             <div
                                 class="shadow-2xl shadow-primary border-2 border-primary h-10 w-10 flex items-center justify-center rounded-full hover:bg-primary dark:hover:text-black hover:text-white text-primary text-xl"
                             >
                                 <i class="bx bxl-facebook"></i>
                             </div>
                         </a>
-                        <a href="https://twitter.com/c0deNugget">
+                        <a href="https://twitter.com/c0deNugget" target="_blank">
                             <div
                                 class="border-2 border-primary h-10 w-10 flex items-center justify-center rounded-full hover:bg-primary dark:hover:text-black hover:text-white text-primary text-xl"
                             >
                                 <i class="bx bxl-twitter"></i>
                             </div>
                         </a>
-                        <a href="https://wa.me/2348014587962">
+                        <a href="https://wa.me/2348014587962" target="_blank">
                             <div
                                 class="border-2 border-primary h-10 w-10 flex items-center justify-center rounded-full hover:bg-primary dark:hover:text-black hover:text-white text-primary text-xl"
                             >
                                 <i class="bx bxl-whatsapp"></i>
                             </div>
                         </a>
-                        <a href="https://www.linkedin.com/in/emma-ndubuisi-363393131/">
+                        <a
+                            href="https://www.linkedin.com/in/emmanuel-nkem-363393131"
+                            target="_blank"
+                        >
                             <div
                                 class="border-2 border-primary h-10 w-10 flex items-center justify-center rounded-full hover:bg-primary dark:hover:text-black hover:text-white text-primary text-xl"
                             >
                                 <i class="bx bxl-linkedin"></i>
                             </div>
                         </a>
-                        <a href="https://github.com/NK-Drakula">
+                        <a href="https://github.com/NK-Drakula" target="_blank">
                             <div
                                 class="border-2 border-primary h-10 w-10 flex items-center justify-center rounded-full hover:bg-primary dark:hover:text-black hover:text-white text-primary text-xl"
                             >
@@ -109,7 +128,7 @@ const typed = [
                     </div>
                 </div>
                 <!-- Second Col flex -->
-                <div class="polygon p-2 ">
+                <div class="polygon p-2">
                     <!-- animated Image  -->
                     <img
                         src="~/assets/images/me.jpg"

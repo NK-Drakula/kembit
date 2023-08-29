@@ -21,22 +21,22 @@ onMounted(async () => {
                     <div>
                         <div
                             v-if="$projectStore.projects.length > 2"
-                            class="grid grid-cols-12 gap-6 items-center justify-center"
+                            class="grid grid-cols-2 gap-10 lg:gap-20 items-center justify-center"
                         >
                             <div
                                 v-for="project in $projectStore.projects.slice(0, 2)"
-                                class="col-span-12 md:col-span-6"
+                                class="col-span-2 lg:col-span-1"
                             >
                                 <WorkCard :project="project" />
                             </div>
                         </div>
                         <div
                             v-else
-                            class="grid grid-cols-12 space-y-11 md:space-y-0 space-x-0 md:space-x-14 items-center justify-center"
+                            class="grid grid-cols-2 gap-10 lg:gap-20 items-center justify-center"
                         >
                             <div
                                 v-for="project in $projectStore.projects"
-                                class="col-span-12 md:col-span-6"
+                                class="col-span-2 lg:col-span-1"
                             >
                                 <WorkCard :project="project" />
                             </div>
@@ -44,7 +44,7 @@ onMounted(async () => {
                             <NuxtLink
                                 to="/projects"
                                 v-if="$projectStore.projects.length > 2"
-                                class="col-span-12 my-3 flex justify-end"
+                                class="col-span-full my-3 flex justify-end"
                             >
                                 <ButtonNext> View All </ButtonNext>
                             </NuxtLink>

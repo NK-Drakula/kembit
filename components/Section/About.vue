@@ -17,7 +17,7 @@ onMounted(async () => {
             <div>
                 <div class="">
                     <div
-                        class="mx-auto flex lg:flex-row items-center flex-col-reverse py-20 gap-20"
+                        class="mx-auto flex lg:flex-row items-center flex-col-reverse  md:px-10 py-20 gap-20"
                     >
                         <div class="flex flex-col my-auto gap-3">
                             <h1

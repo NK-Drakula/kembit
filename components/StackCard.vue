@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-    stack: Object
+    stack: Object,
 });
 
 const stack = props.stack;
@@ -10,7 +10,7 @@ const stack = props.stack;
     <div
         class="col-span-4 md:col-span-3 lg:col-span-2 rounded-lg flex flex-col justify-center items-center my-3 px-2 sm:px-3 md:px-4 lg:px-5"
         data-aos="fade-left"
-        data-aos-duration="3000"
+        :data-aos-duration="3000"
     >
         <div
             class="bg-gray-300/50 dark:bg-zinc-800 p-4 lg:mx-45 rounded-lg flex items-center justify-center hvr-glow shadow-md"
