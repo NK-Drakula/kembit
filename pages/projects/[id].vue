@@ -49,7 +49,7 @@ onMounted(async () => {
                             <strong>Project Description:</strong><br />
                             <div
                                 v-html="$projectStore.project.description"
-                                class="text-justify space-y-3"
+                                class="md:text-justify space-y-3"
                             ></div>
                         </div>
                         <div class="space-y-2">

@@ -48,7 +48,8 @@ onMounted(() => {
     </div>
 </template>
 <style lang="css" scoped>
-html, body {
+html,
+body {
     margin: 0px !important;
     overflow-x: hidden !important;
 }
